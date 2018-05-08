@@ -15,6 +15,7 @@
       <module name="eureka-client" target="1.8" />
       <module name="eureka-client2" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="springcloud" target="1.8" />
       <module name="springcolud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
