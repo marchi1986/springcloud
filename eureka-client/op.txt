@@ -1,0 +1,2 @@
+cd G:\Repositories\Git\springcloud\eureka-client\target
+java -jar eureka-client-0.0.1-SNAPSHOT.jar --spring.server.port=8764
