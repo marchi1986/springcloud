@@ -2,8 +2,13 @@ spring:
   application:
     name: eureka-feign-client
 server:
-  port: 8767
+  port: 8768
 eureka:
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/
+feign:
+  httpclient:
+    enabled: ture
+  hystrix:
+    enabled: true

@@ -1,6 +1,7 @@
 package com.example.eurekafeignclient.controller;
 
 import com.example.eurekafeignclient.service.HiService;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ public class HiController {
 
     @Autowired
     HiService hiService;
+
 
     @GetMapping("/hi")
     public String sayHi(@RequestParam(defaultValue = "forezp",required = false) String name){
