@@ -10,23 +10,27 @@
     <packaging>pom</packaging>
 
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
+        <spring-cloud.version>Finchley.RC2</spring-cloud.version>
+        <springboot.version>2.0.2.RELEASE</springboot.version>
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -55,4 +59,14 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <modules>
+        <module>eureka-server</module>
+        <module>eureka-client</module>
+        <module>eureka-client2</module>
+        <module>eureka-ribbon-client</module>
+        <module>eureka-feign-client</module>
+        <module>eureka-monitor-client</module>
+        <module>eureka-zuul-client</module>
+    </modules>
 </project>
