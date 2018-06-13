@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class HiController {
     @Value("${server.port}")
     String port;
-
     @GetMapping("/hi")
     public String home(@RequestParam String name){
         return "hi "+name+",i am from port:"+port;
+    }
+
+    @Value("${foo}")
+    String foo;
+    @GetMapping("/foo")
+    public String foo(){
+        return foo;
     }
 }

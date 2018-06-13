@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-client
+  cloud:
+    config:
+#      server:
+#        git:
+#          uri:
+#          searchPaths:
+#          username:
+#          password:
+      fail-fast: true
+      discovery:
+        enabled: true
+        serviceId: config-server
+  profiles:
+    active: dev
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/
